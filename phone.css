@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+}
+
+#upper {
+    font-size: 12px;
+    width: calc(100% - 10px);
+    height: 35px;
+    background-color: #4863A0;
+    font-style: italic;
+    color: white;
+    padding: 5px;
+}
+
+#middle {
+    height: calc(100% - 60px);
+    width: 100%;
+}
+
+#middleleft {
+    height: 100%;
+    width: 220px;
+    float: left;
+    background-color: lightgray;
+}
+
+#middleright {
+    height: 100%;
+    width: calc(100% - 220px);
+    overflow: auto;
+}
+
+#bottom {
+    height: 15px;
+    width: 100%;
+    background-color: #4863A0;
+    font-size: 10px;
+    text-align-last: center;
+}
+
+#upperleft {
+    float: left;
+    width: 300px;
+    text-align-last: center;
+    margin-top: 5px;
+    font-size: larger
+}
+
+#upperright {
+    float: right;
+    width: 1000px;
+    text-align-last: center;
+    margin-top: 5px;
+    font-size: larger
+}
+
+.middlelefts {
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600
+}
+
+.internalsize {
+    font-size: 14px;
+    margin-left: 60px;
+    margin-bottom: 20px
+}
+
+.middlelefts1 {
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600
+}
+
+#mrightbottom {
+    height: 530px;
+    width: 1080px;
+}
+
+.mobilebox {
+    border: 0.5px gray solid;
+    height: 285px;
+    width: 190px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    
+}
+
+.className {
+    text-align-last: center;
+    height: 195px;
+    width: 180px;
+    margin-left: 3px;
+    margin-top: 3px;
+    border: 0.5px gray solid;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.redmi7{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(redmi.jpg);
+margin-left:35px}
+
+.mobilename {
+    height: 15px;
+    width: 180px;
+    margin-left: 3px;
+    margin-top: 2px;
+    text-align-last: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 590;
+    font-size: 15px;
+    border: 0.5px gray solid;
+}
+
+.prices {
+    height: 22px;
+    width: 180px;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: center;
+    border: 0.5px gray solid;
+}
+
+.ram {
+    height: 20px;
+    width: 180px;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: center;
+    font-size: 14px;
+    border: 0.5px gray solid;
+}
+.mobilescreen{
+    
+    height: 580px;
+    width: 1330px;
+    margin-left: 10px;
+    margin-top: 10px;
+    }
+.ptop{
+    border: 1PX black solid;
+    height: 110px;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+.rightscrren{
+    
+    height: 400px;
+    width: 900px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 590;
+    font-size: 15px;
+}
+.titles{    
+   
+    height: 20px;
+    width: 850px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: left;
+    padding: 5px;
+    font-size: 16px;
+}
+.specifications{
+    border: 1PX gray solid;
+    height: 300px;
+    width: 850px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last:left;
+    font-size: 14px;
+    padding: 5px;
+}
+.specifications1{
+    height: 25px;
+    width: 810px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: left;
+    padding: 15px;
+    font-size: 20px;
+float: left;}
+.des{
+    height: 20px;
+    width: 840px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 6px;
+    text-align-last: left;
+}
+   .des1{
+        height: 17px;
+        width: 147px;
+        float: left;
+        text-align-last: left;
+        font-size: 12px;
+        padding-top: 3px;
+        padding-left: 3px;
+        color: darkolivegreen;
+    
+        
+        }
+   .des2{
+            height: 17px;
+            width: 642px;
+            float: left;
+            text-align-last: left;
+            margin-left: 40px;
+            font-size: 12px;
+            padding-top: 3px;
+            padding-left: 3px }
+    .General{
+       
+        height: 18px;
+        width: 830px;
+        float: left;
+        margin-left: 3px;
+        margin-top: 3px;
+        text-align-last: left;
+        padding: 5px;
+        font-size: 15px;
+    }
+.offers{   
+   
+    height: 14px;
+    width: 850px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: left;
+    padding: 5px;
+    font-size: 12px;
+}
+.availableoffers{
+    
+    height: 20px;
+    width: 850px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: left;
+    padding: 5px;
+    font-size: 16px;
+}
+.specificationsdetails{
+    border: 1PX black solid;
+    height: 14px;
+    width: 840px;
+    float: left;
+    margin-left: 3px;
+    margin-top: 3px;
+    text-align-last: left;
+    padding: 1px;
+    font-size: 12px;
+}
+.mobileimg{
+    height:440px;
+    width: 370px;
+    border: 1px solid gray; 
+    margin-left: 10px;
+    margin-top: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(redmi.jpg);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    
+}
+.addto{
+    width: 140px;
+    height: 30px;
+    border: 1px black solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    padding-left: 40px;
+    padding-top: 10px;
+    background-color: darkolivegreen;
+    color: aliceblue
+}
+.mobiledetailbox
+{
+height: 520px;
+width: 390px;
+float: left;
+margin-left: 10px;
+margin-top: 10px;
+}

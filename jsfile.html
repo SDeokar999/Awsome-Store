@@ -1,0 +1,369 @@
+<html>
+<head>
+    <title>Awsome Store</title>
+</head>
+
+<link rel="stylesheet" href="phone.css">
+<body>
+<div id="container">
+    <div id="upper">
+        <div id="upperleft"><img src="storeimage.jpg" height="25x" width="25px"> AwsomeStore</div>
+        <div id="upperright">Addcart</div>
+    </div>
+    <div id="middle">
+        <div id="middleleft">
+            <div class="middlelefts1" id="p">Filters</div>
+            <div class="middlelefts">Internal Memory</div>
+            <div class="internalsize">
+                <form>
+                    <input type="checkbox" onclick="handleFilterClick('inter',2)">2GB<br>
+                    <input type="checkbox" onclick="handleFilterClick('inter',3)">3G<br>
+                    <input type="checkbox" onclick="handleFilterClick('inter',4)">4GB<br>
+
+                </form>
+            </div>
+            <div class="middlelefts">Ram</div>
+            <div class="internalsize">
+                <form>
+                    <input type="checkbox" id="16GB" onclick="handleFilterClick('ram',16)">16GB<br>
+                    <input type="checkbox" id="32GB" onclick="handleFilterClick('ram',32)">32GB<br>
+                    <input type="checkbox" id="64GB" onclick="handleFilterClick('ram',64)">64GB<br>
+                </form>
+            </div>
+            <div class="middlelefts">Screen size</div>
+            <div class="internalsize">
+                <form>
+                    <input type="checkbox">5.2'<br>
+                    <input type="checkbox">5.9'<br>
+                    <input type="checkbox">6'<br>
+                </form>
+            </div>
+            <div class="middlelefts" id="ap">Price</div>
+            <div class="internalsize">
+                <form>
+                    <input type="checkbox" id="demo1" onclick="">below 10000 <br>
+                    <input type="checkbox" id="demo2" onclick="">10001 to 15000<br>
+                    <input type="checkbox" id="demo3" onclick="">15001 to 20000<br>
+                    <input type="checkbox" id="demo4" onclick="">20001 to 30000<br>
+                </form>
+            </div>
+        </div>
+        <div id="middleright">
+            <div>
+
+                <div id="div1">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">@Copyright</div>
+</div>
+<script>
+    var x = [{inter: "2", name: "Redmi7", prices: "9999", ram: "16", photo: "Honor9N.jpg",className:"redmi7",details:"Realme 5",titl:"RED",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Blue"},
+        {inter: "2", name: "oppo8 ", prices: "8995", ram: "32",photo: "oppoA7.jpg",className:"oppo8",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Red"},
+        {inter: "2", name: "Vivox", prices: "7998", ram: "64",photo: "oppoA7.jpg",className:"Vivox",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Black"},
+        {inter: "3", name: "iphonex", prices: "21000", ram: "16",photo: "Honor9N.jpg",className:"iphonex",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Blue"},
+        {inter: "3", name: "samsungx", prices: "19000", ram: "32",photo: "Honor9N.jpg",className:"samsungx",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Red"},
+        {inter: "3", name: "Redmi6", prices: "15000", ram: "64",photo: "oppoA7.jpg",className:"Redmi6",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C"},
+        {inter: "4", name: "Realme7", prices: "12000", ram: "16",photo: "oppoA7.jpg",className:"Realme7",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Black"},
+        {inter: "4", name: "oppox", prices: "17000", ram: "32",photo: "Honor9N.jpg",className:"oppox",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Red"},
+        {inter: "4", name: "oppox", prices: "17000", ram: "64",photo: "oppoA7.jpg",className:"oppox",
+    offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
+    offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Black"}]
+
+    var aFilterData = {inter: [], ram: []};
+    for (var y = 0; y < x.length; y++) {
+        myFunctionx(y);
+    }
+
+    function myFunctionx(z) {
+        var para = document.createElement("div")
+        var para1 = document.createElement("div")
+        var para2 = document.createElement("div")
+        var para3 = document.createElement("div")
+        var para4 = document.createElement("div")
+        var para5 = document.createElement("div")
+        para.appendChild(para1)
+        para.onclick=mobileDetails.bind(this,z);
+        para1.appendChild(para2)
+        para1.appendChild(para3)
+        para1.appendChild(para4)
+        para1.appendChild(para5)
+        para1.classList.add('mobilebox')
+        para2.classList.add('redmi7')
+        para3.classList.add('mobilename')
+        para4.classList.add('prices')
+        para5.classList.add('ram')
+
+        var node = document.createTextNode(x[z].name)
+        para3.appendChild(node)
+        var node = document.createTextNode(x[z].prices + "/-")
+        para4.appendChild(node)
+        var node = document.createTextNode(x[z].ram + " RAM")
+        para5.appendChild(node)
+        
+        var imageNode=document.createElement("div")
+        imageNode.classList.add(x[z].className)
+        para1.appendChild(imageNode)
+        var div2 = document.getElementById("div1")
+        div2.appendChild(para);
+    }
+
+    function filterNewData() {
+        document.getElementById("middle").innerHTML = "";
+        for (var d in aFilterData) {
+            var filterableValues = aFilterData[d]
+            for (var w = 0; w < filterableValues.length; w++) {
+                for (var y = 0; y < x.length; y++) {
+
+                    if ((x[y][d] == filterableValues[w])) {
+                        myFunctionx(y);
+                    }
+                }
+            }
+        }
+    }
+   
+    function mobileDetails(z){
+        document.getElementById("middle").innerHTML="";
+        var p=document.createElement("div");
+        var p1=document.createElement("div");
+        var p2=document.createElement("div");
+        var p3=document.createElement("div");
+        var p4=document.createElement("div");
+        var p5=document.createElement("div");
+        var p6=document.createElement("div");
+        var p7=document.createElement("div");
+        var p8=document.createElement("div");
+        var p9=document.createElement("div");
+        var p10=document.createElement("div");
+        var p11=document.createElement("div");
+        var p12=document.createElement("div");
+        var p13=document.createElement("div");
+        var p14=document.createElement("div");
+        var p15=document.createElement("div");
+        var p21=document.createElement("div");
+        var p22=document.createElement("div");
+        var p23=document.createElement("div");
+        var p24=document.createElement("div");
+        var p25=document.createElement("div");
+        var p26=document.createElement("div");
+        var p27=document.createElement("div");
+        var p28=document.createElement("div");
+        var p29=document.createElement("div");
+        var p30=document.createElement("div");
+        var p31=document.createElement("div");
+        var p32=document.createElement("div");
+        var p33=document.createElement("div");
+        var p34=document.createElement("div");
+        var p35=document.createElement("div");
+        var p36=document.createElement("div");
+        var p37=document.createElement("div");
+        var p38=document.createElement("div");
+        var p39=document.createElement("div");
+        var p40=document.createElement("div");
+        var p41=document.createElement("div");
+        var p42=document.createElement("div");
+        var p43=document.createElement("div");
+        var p44=document.createElement("div");
+        var p45=document.createElement("div");
+        var p46=document.createElement("div");
+         p.appendChild(p1)
+        p1.appendChild(p2);      
+        p2.appendChild(p15);
+        p2.appendChild(p14);
+        p2.appendChild(p13);
+        p1.appendChild(p3);
+        p3.appendChild(p4);
+        p3.appendChild(p5);
+        p3.appendChild(p6);
+        p3.appendChild(p7);
+        p3.appendChild(p8);
+        p3.appendChild(p9);
+        p3.appendChild(p10);
+        p3.appendChild(p11);
+        p3.appendChild(p12);
+        p12.appendChild(p21);
+        p12.appendChild(p22);
+        p12.appendChild(p23);
+        p23.appendChild(p24);
+        p23.appendChild(p25);
+        p12.appendChild(p26);
+        p26.appendChild(p27);
+        p26.appendChild(p28);
+        p12.appendChild(p29);
+        p29.appendChild(p30);
+        p29.appendChild(p31);
+        p12.appendChild(p32);
+        p32.appendChild(p33);
+        p32.appendChild(p34);
+        p12.appendChild(p35);
+        p35.appendChild(p36);
+        p35.appendChild(p37);
+        p12.appendChild(p38);
+        p38.appendChild(p39);
+        p38.appendChild(p40);
+        p12.appendChild(p41);
+        p41.appendChild(p42);
+        p41.appendChild(p43);
+        p12.appendChild(p44);
+        p44.appendChild(p45);
+        p44.appendChild(p46);
+p1.classList.add("mobilescreen");
+p2.classList.add("mobiledetailbox");
+p3.classList.add("rightscrren");
+p4.classList.add("titles")
+p5.classList.add("titles")
+p6.classList.add("titles")
+p7.classList.add("availableoffers")
+p8.classList.add("offers")
+p9.classList.add("offers")
+p10.classList.add("offers")
+p11.classList.add("offers")
+p12.classList.add("specifications")
+p21.classList.add("specifications1")
+p22.classList.add("General")
+p23.classList.add("des")
+p24.classList.add("des1")
+p25.classList.add("des2")
+p26.classList.add("des")
+p27.classList.add("des1")
+p28.classList.add("des2")
+p29.classList.add("des")
+p30.classList.add("des1")
+p31.classList.add("des2")
+p32.classList.add("des")
+p33.classList.add("des1")
+p34.classList.add("des2")
+p35.classList.add("des")
+p36.classList.add("des1")
+p37.classList.add("des2")
+p38.classList.add("des")
+p39.classList.add("des1")
+p40.classList.add("des2")
+p41.classList.add("des")
+p42.classList.add("des1")
+p43.classList.add("des2")
+p44.classList.add("des")
+p45.classList.add("des1")
+p46.classList.add("des2")
+p15.classList.add("mobileimg");
+p13.classList.add("addto");
+p14.classList.add("addto");
+var div4=document.getElementById("middle");
+div4.appendChild(p);
+var nodees = document.createTextNode(x[z].name+" ( "+x[z].colors+" ,"+x[z].ram+" GB )"+"   ("+x[z].inter+" GB RAM )");
+        p4.appendChild(nodees);
+        var nodees = document.createTextNode("₹ "+ x[z].prices+" -/"+"  Extra 20% off ");
+        p5.appendChild(nodees);
+        var nodess = document.createTextNode(x[z].ram + " RAM");
+        p6.appendChild(nodess);
+        var nodess = document.createTextNode("Available offers");
+        p7.appendChild(nodess);
+        var nodess = document.createTextNode(x[z].offers);
+        p8.appendChild(nodess);
+        var nodess = document.createTextNode(x[z].offers1);
+        p9.appendChild(nodess);
+        var nodess = document.createTextNode(x[z].offers2);
+        p10.appendChild(nodess);
+        var nodess = document.createTextNode(x[z].offers3);
+        p11.appendChild(nodess);
+        var nodess = document.createTextNode("Specifications");
+        p21.appendChild(nodess);
+        var nodess = document.createTextNode("General");
+        p22.appendChild(nodess);
+        var nodess = document.createTextNode("In The Box");
+        p24.appendChild(nodess);
+        var nodess = document.createTextNode("Handset, Protective Cover, 5V2A Charger, Charging Cable, SIM eject tool, Warranty card, User guide");
+        p25.appendChild(nodess);
+        var nodess = document.createTextNode("Primary Camera");
+        p27.appendChild(nodess);
+        var nodess = document.createTextNode("12MP");
+        p28.appendChild(nodess);
+        var nodess = document.createTextNode("Color");
+        p30.appendChild(nodess);
+        var nodess = document.createTextNode(x[z].colors);
+        p31.appendChild(nodess);
+        var nodess = document.createTextNode("Display Size");
+        p33.appendChild(nodess);
+        var nodess = document.createTextNode("15.9 cm (6.26 inch)");
+        p34.appendChild(nodess);
+        var nodess = document.createTextNode("Network Type");
+        p36.appendChild(nodess);
+        var nodess = document.createTextNode("3G, 4G VOLTE, 2G");
+        p37.appendChild(nodess);
+        var nodess = document.createTextNode("Battery Capacity");
+        p39.appendChild(nodess);
+        var nodess = document.createTextNode("4000mAh");
+        p40.appendChild(nodess);
+        var nodess = document.createTextNode("Operating System");
+        p42.appendChild(nodess);
+        var nodess = document.createTextNode("Android Pie 9.0");
+        p43.appendChild(nodess);
+        var nodess = document.createTextNode("Warranty Summary");
+        p45.appendChild(nodess);
+        var nodess = document.createTextNode(" 12 Months");
+        p46.appendChild(nodess);
+        var nodess = document.createTextNode("ADD TO CART ");
+        p14.appendChild(nodess);
+        var nodess = document.createTextNode("BUY NOW ");
+        p13.appendChild(nodess);
+
+    }
+
+    function handleFilterClick(filterType, filterData) {
+        if (filterType == "ram") {
+            aFilterData["ram"].push(filterData);
+
+            {
+                filterNewData();
+            }
+        } else if (filterType == "inter") {
+            aFilterData["inter"].push(filterData);
+            {
+                filterNewData();
+            }
+        }
+
+    }
+
+    // function handleFilterClicks(filterData){
+
+    //         aFilterDtata["inter"].push(filterData)
+
+    //         filterInternalMemory();
+
+    // }
+    // function filterInternalMemory(){
+    //         document.getElementById("div1").innerHTML="";
+    //         for(var d=0;d<x.length;d++){
+    //                 if(x[d].inter==aFilterDtata["inter"][0]||x[d].inter==aFilterDtata["inter"][1]
+    //                 ||x[d].inter==aFilterDtata["inter"][2]||
+    //                 x[d].inter==aFilterDtata["inter"][3])
+    //                 myFunctionx(d)
+    //         }
+    // }
+
+
+</script>
+</body>
+</html>
+
+
