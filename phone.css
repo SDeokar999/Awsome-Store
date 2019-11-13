@@ -53,10 +53,15 @@ body {
 
 #upperright {
     float: right;
-    width: 1000px;
+    width: 100px;
     text-align-last: center;
     margin-top: 5px;
-    font-size: larger
+    font-size: larger;
+    color: aqua;
+    background-color: blueviolet;
+    border: 1px black solid;
+    hover:
+
 }
 
 .middlelefts {
@@ -150,7 +155,7 @@ margin-left:35px}
     margin-top: 10px;
     }
 .ptop{
-    border: 1PX black solid;
+    border: 1PX tan solid;
     height: 110px;
     width: 300px;
     margin-left: 10px;

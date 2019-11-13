@@ -60,6 +60,7 @@
     <div id="bottom">@Copyright</div>
 </div>
 <script>
+    
     var x = [{inter: "2", name: "Redmi7", prices: "9999", ram: "16", photo: "Honor9N.jpg",className:"redmi7",details:"Realme 5",titl:"RED",
     offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
     offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Blue"},
@@ -87,7 +88,7 @@
         {inter: "4", name: "oppox", prices: "17000", ram: "64",photo: "oppoA7.jpg",className:"oppox",
     offers:"Bank Offer10% Cashback* on HDFC Bank Debit CardsT&C",offers1:"Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit CardT&C",
     offers2:"Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C",offers3:"Special PriceGet extra ₹640 off (price inclusive of discount)T&C",colors:"Black"}]
-
+    var cart=[];
     var aFilterData = {inter: [], ram: []};
     for (var y = 0; y < x.length; y++) {
         myFunctionx(y);
@@ -325,9 +326,43 @@ var nodees = document.createTextNode(x[z].name+" ( "+x[z].colors+" ,"+x[z].ram+"
         p14.appendChild(nodess);
         var nodess = document.createTextNode("BUY NOW ");
         p13.appendChild(nodess);
-
+        p14.onclick=addtocart.bind(this,z);
     }
+function addtocart(z){
+    document.getElementById("middle").innerHTML="";
 
+    var para = document.createElement("div")
+        var para1 = document.createElement("div")
+        var para2 = document.createElement("div")
+        var para3 = document.createElement("div")
+        var para4 = document.createElement("div")
+        var para5 = document.createElement("div")
+        para.appendChild(para1)
+        para1.appendChild(para2)
+        para1.appendChild(para3)
+        para1.appendChild(para4)
+        para1.appendChild(para5)
+        para1.classList.add('mobilebox')
+        para2.classList.add('redmi7')
+        para3.classList.add('mobilename')
+        para4.classList.add('prices')
+        para5.classList.add('ram')
+
+        var node = document.createTextNode(x[z].name)
+        para3.appendChild(node)
+        var node = document.createTextNode(x[z].prices + "/-")
+        para4.appendChild(node)
+        var node = document.createTextNode(x[z].ram + " RAM")
+        para5.appendChild(node)
+        
+        var imageNode=document.createElement("div")
+        imageNode.classList.add(x[z].className)
+        para1.appendChild(imageNode)
+        var div2 = document.getElementById("middle")
+        div2.appendChild(para);
+    cart.push(x[z]);    
+    
+}
     function handleFilterClick(filterType, filterData) {
         if (filterType == "ram") {
             aFilterData["ram"].push(filterData);
@@ -344,6 +379,7 @@ var nodees = document.createTextNode(x[z].name+" ( "+x[z].colors+" ,"+x[z].ram+"
 
     }
 
+    
     // function handleFilterClicks(filterData){
 
     //         aFilterDtata["inter"].push(filterData)
