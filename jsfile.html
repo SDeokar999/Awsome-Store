@@ -7,8 +7,8 @@
 <body>
 <div id="container">
     <div id="upper">
-        <div id="upperleft"><img src="storeimage.jpg" height="25x" width="25px"> AwsomeStore</div>
-        <div id="upperright">Addcart</div>
+        <div id="upperleft" ><img src="storeimage.jpg" height="25x" width="25px"> AwsomeStore</div>
+        <div id="upperright" onclick="addtocart()">Addcart</div>
     </div>
     <div id="middle">
         <div id="middleleft">
@@ -93,6 +93,7 @@
     for (var y = 0; y < x.length; y++) {
         myFunctionx(y);
     }
+      
 
     function myFunctionx(z) {
         var para = document.createElement("div")
@@ -103,26 +104,24 @@
         var para5 = document.createElement("div")
         para.appendChild(para1)
         para.onclick=mobileDetails.bind(this,z);
+        var imageNode=document.createElement("div")
+        imageNode.classList.add(x[z].className)
+       para1.appendChild(imageNode)
         para1.appendChild(para2)
         para1.appendChild(para3)
         para1.appendChild(para4)
         para1.appendChild(para5)
         para1.classList.add('mobilebox')
-        para2.classList.add('redmi7')
+       // para2.classList.add('redmi7')
         para3.classList.add('mobilename')
         para4.classList.add('prices')
         para5.classList.add('ram')
-
         var node = document.createTextNode(x[z].name)
         para3.appendChild(node)
         var node = document.createTextNode(x[z].prices + "/-")
         para4.appendChild(node)
         var node = document.createTextNode(x[z].ram + " RAM")
-        para5.appendChild(node)
-        
-        var imageNode=document.createElement("div")
-        imageNode.classList.add(x[z].className)
-        para1.appendChild(imageNode)
+        para5.appendChild(node)   
         var div2 = document.getElementById("div1")
         div2.appendChild(para);
     }
@@ -186,9 +185,11 @@
         var p44=document.createElement("div");
         var p45=document.createElement("div");
         var p46=document.createElement("div");
-         p.appendChild(p1)
+        var imageNode=document.createElement("div")
+        p.appendChild(p1)
         p1.appendChild(p2);      
-        p2.appendChild(p15);
+        p2.appendChild(imageNode);
+        imageNode.classList.add(x[z].className)
         p2.appendChild(p14);
         p2.appendChild(p13);
         p1.appendChild(p3);
@@ -265,7 +266,7 @@ p43.classList.add("des2")
 p44.classList.add("des")
 p45.classList.add("des1")
 p46.classList.add("des2")
-p15.classList.add("mobileimg");
+imageNode.classList.add("mobileimg")
 p13.classList.add("addto");
 p14.classList.add("addto");
 var div4=document.getElementById("middle");
@@ -324,13 +325,22 @@ var nodees = document.createTextNode(x[z].name+" ( "+x[z].colors+" ,"+x[z].ram+"
         p46.appendChild(nodess);
         var nodess = document.createTextNode("ADD TO CART ");
         p14.appendChild(nodess);
-        var nodess = document.createTextNode("BUY NOW ");
+        var nodess = document.createTextNode("Back to Home Page ");
         p13.appendChild(nodess);
-        p14.onclick=addtocart.bind(this,z);
+        p14.onclick=addpush.bind(this,z);
+        p13.onclick=homepage.bind(this,z);
+    }
+    function homepage(z){
+var c=document.getElementById("middleright");
+c.innerHTML=myFunctionx(z);
+    }
+    function addpush(z){
+        cart.push(z);
     }
 function addtocart(z){
     document.getElementById("middle").innerHTML="";
-
+    for (var z =0; z < cart.length;z++) {
+  
     var para = document.createElement("div")
         var para1 = document.createElement("div")
         var para2 = document.createElement("div")
@@ -338,16 +348,19 @@ function addtocart(z){
         var para4 = document.createElement("div")
         var para5 = document.createElement("div")
         para.appendChild(para1)
+        para.onclick=mobileDetails.bind(this,z);
+        var imageNode=document.createElement("div")
+        imageNode.classList.add(x[z].className)
+        para1.appendChild(imageNode)
         para1.appendChild(para2)
         para1.appendChild(para3)
         para1.appendChild(para4)
         para1.appendChild(para5)
         para1.classList.add('mobilebox')
-        para2.classList.add('redmi7')
+//        para2.classList.add('redmi7')
         para3.classList.add('mobilename')
         para4.classList.add('prices')
         para5.classList.add('ram')
-
         var node = document.createTextNode(x[z].name)
         para3.appendChild(node)
         var node = document.createTextNode(x[z].prices + "/-")
@@ -357,10 +370,11 @@ function addtocart(z){
         
         var imageNode=document.createElement("div")
         imageNode.classList.add(x[z].className)
-        para1.appendChild(imageNode)
+    }
+        //para1.appendChild(imageNode)
         var div2 = document.getElementById("middle")
         div2.appendChild(para);
-    cart.push(x[z]);    
+        
     
 }
     function handleFilterClick(filterType, filterData) {
@@ -374,7 +388,6 @@ function addtocart(z){
             aFilterData["inter"].push(filterData);
             {
                 filterNewData();
-                
             }
         }
 

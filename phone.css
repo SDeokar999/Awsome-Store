@@ -91,7 +91,7 @@ body {
 }
 
 .mobilebox {
-    border: 0.5px gray solid;
+    
     height: 285px;
     width: 190px;
     margin-left: 10px;
@@ -110,13 +110,62 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.className1 {
+    text-align-last: center;
+    height: 195px;
+    width: 180px;
+    margin-left: 20px;
+    margin-top: 3px;
+    border: 0.5px gray solid;
+    background-repeat: no-repeat;
+    background-position: center;
 
+}
 .redmi7{height: 214px;width:120px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image:url(redmi.jpg);
+    background-image:url(redmi7.jpg);
 margin-left:35px}
-
+.iphonex{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(iphonex.jpg);
+margin-left:35px}
+.oppo8{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(oppo8.jpg);
+margin-left:35px}
+.Vivox{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(Vivox.jpg);
+margin-left:35px}
+.Redmi6{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(Redmi6.jpg);
+margin-left:35px}
+.Realme7{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(Realme7.jpg);
+margin-left:35px}
+.oppox{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(oppox.jpg);
+margin-left:35px}
+.samsungx{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(samsungx.jpg);
+margin-left:35px}
+.oppox{height: 214px;width:120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image:url(oppox.jpg);
+margin-left:35px}
 .mobilename {
     height: 15px;
     width: 180px;
@@ -126,7 +175,7 @@ margin-left:35px}
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 590;
     font-size: 15px;
-    border: 0.5px gray solid;
+    
 }
 
 .prices {
@@ -135,7 +184,7 @@ margin-left:35px}
     margin-left: 3px;
     margin-top: 3px;
     text-align-last: center;
-    border: 0.5px gray solid;
+    
 }
 
 .ram {
@@ -145,7 +194,7 @@ margin-left:35px}
     margin-top: 3px;
     text-align-last: center;
     font-size: 14px;
-    border: 0.5px gray solid;
+    
 }
 .mobilescreen{
     
@@ -279,6 +328,7 @@ float: left;}
     font-size: 12px;
 }
 .mobileimg{
+    border: 1px black solid;
     height:440px;
     width: 370px;
     border: 1px solid gray; 
@@ -286,7 +336,7 @@ float: left;}
     margin-top: 10px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image:url(redmi.jpg);
+    
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -306,6 +356,7 @@ float: left;}
 }
 .mobiledetailbox
 {
+    
 height: 520px;
 width: 390px;
 float: left;
